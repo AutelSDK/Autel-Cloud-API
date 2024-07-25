@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>autel-cloud-api</artifactId>
+        <groupId>com.autel</groupId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cloud-api</artifactId>
+    <groupId>com.autel</groupId>
+    <version>${cloud-sdk.revision}</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.autel.great.context</groupId>
+            <artifactId>autel-framework-context</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <artifactId>autel-framework-websocket</artifactId>
+            <groupId>com.autel.great.websocket</groupId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <artifactId>autel-framework-mqtt</artifactId>
+            <groupId>com.autel.great.mqtt</groupId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+</project>
