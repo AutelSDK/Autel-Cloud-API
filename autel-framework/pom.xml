@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>autel-framework-redis</module>
+        <module>autel-framework-context</module>
+        <module>autel-framework-db</module>
+        <module>autel-framework-web</module>
+        <module>autel-framework-storage</module>
+        <module>autel-framework-websocket</module>
+        <module>autel-framework-mqtt</module>
+    </modules>
+
+    <groupId>com.autel.great</groupId>
+    <artifactId>autel-framework</artifactId>
+    <version>${revision}</version>
+    <name>autel-framework</name>
+
+    <properties>
+        <revision>1.0.0</revision>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <javax-activation.version>1.1.1</javax-activation.version>
+        <mysql.version>8.0.31</mysql.version>
+        <mybatis-plus.version>3.4.2</mybatis-plus.version>
+        <druid.version>1.2.6</druid.version>
+        <mqtt.version>5.5.5</mqtt.version>
+
+
+        <minio.version>8.3.7</minio.version>
+        <aliyun-sdk-sts.version>3.1.0</aliyun-sdk-sts.version>
+        <aliyun-oss.version>3.12.0</aliyun-oss.version>
+        <glassfish-jaxb.version>2.3.3</glassfish-jaxb.version>
+        <jwt.version>3.12.1</jwt.version>
+        <okhttp3.version>4.9.1</okhttp3.version>
+        <cloud-sdk.revision>1.0.3</cloud-sdk.revision>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>2.7.12</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
