@@ -1,0 +1,163 @@
+server:
+  port: 9000
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: cloud-service
+  datasource:
+    druid:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://xx:3306/cloud_service?useSSL=false&allowPublicKeyRetrieval=true
+      username: xx
+      password: xx
+      initial-size: 10
+      min-idle: 10
+      max-active: 20
+      max-wait: 60000
+
+  redis:
+    host: xx
+    port: 6379
+    database: 0
+    username: # if you enable
+    password: xx
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+
+  servlet:
+    multipart:
+      max-file-size: 2GB
+      max-request-size: 2GB
+
+jwt:
+  issuer: DJI
+  subject: CloudApiSample
+  secret: CloudApiSample
+  age: 86400
+
+mqtt:
+  BASIC:
+    protocol: MQTT
+    host: xx.xx.cn
+    port: 21883
+    username: xx
+    password: xx
+    client-id: cloud_service
+    path:
+  DRC:
+    protocol: WSS
+    host: xx.xx.cn
+    port: 28084
+    path: /mqtt
+    username: cc_server
+    password: qjE6RUABc1dqVVRLJTXkdqOgdFVOIHMf
+
+cloud-sdk:
+  mqtt:
+    inbound-topic: sys/product/+/status,thing/product/+/requests,thing/product/+/state
+
+url:
+  manage:
+    prefix: manage
+    version: /api/v1
+  map:
+    prefix: map
+    version: /api/v1
+  media:
+    prefix: media
+    version: /api/v1
+  wayline:
+    prefix: wayline
+    version: /api/v1
+  storage:
+    prefix: storage
+    version: /api/v1
+  control:
+    prefix: control
+    version: /api/v1
+
+# Tutorial: https://www.alibabacloud.com/help/en/object-storage-service/latest/use-a-temporary-credential-provided-by-sts-to-access-oss
+#oss:
+#  enable: false
+#  provider: ALIYUN # @see com.dji.sample.component.OssConfiguration.model.enums.OssTypeEnum
+#  endpoint: https://oss-cn-hangzhou.aliyuncs.com
+#  access-key: Please enter your access key.
+#  secret-key: Please enter your secret key.
+#  expire: 3600
+#  region: Please enter your oss region. # cn-hangzhou
+#  role-session-name: cloudApi
+#  role-arn: Please enter your role arn. # acs:ram::123456789:role/stsrole
+#  bucket: Please enter your bucket name.
+#  object-dir-prefix: Please enter a folder name.
+
+#oss:
+#  enable: true
+#  provider: aws
+#  endpoint: https://s3.us-east-1.amazonaws.com
+#  access-key:
+#  secret-key:
+#  expire: 3600
+#  region: us-east-1
+#  role-session-name: cloudApi
+#  role-arn:
+#  bucket: cloudapi-bucket
+#  object-dir-prefix: wayline
+
+oss:
+  enable: true
+  provider: minio
+  endpoint: http://127.0.0.1:9000
+  access-key: xx
+  secret-key: xx
+  bucket: autel-store
+  expire: 3600
+  region:
+  object-dir-prefix: wayline
+
+logging:
+  level:
+    com.dji: debug
+  file:
+    name: logs/cloud-service.log
+
+ntp:
+  server:
+    host: Google.mzr.me
+
+cloud-api:
+  app:
+    id: Please enter the app id.
+    key: Please enter the app key.
+    license: Please enter the app license.
+
+livestream:
+  url:
+    agora:
+      channel: Please enter the agora channel.
+      token: Please enter the agora temporary token.
+      uid: 654321
+
+    rtmp:
+      url: rtmp://xx.xx.cn:1936/live/  # Example: 'rtmp://192.168.1.1/live/'
+      payUrl: http://xx.xx.cn:8081/index/api/webrtc?app=live&stream=%s&type=play
+    rtsp:
+      username: Please enter the username.
+      password: Please enter the password.
+      port: 8554
+
+    gb28181:
+      serverIP: Please enter the server ip.
+      serverPort: 8080
+      serverID: Please enter the server id.
+      agentID: Please enter the agent id.
+      agentPassword: Please enter the agent password.
+      localPort: 8081
+      channel: Please enter the channel.
+
+    whip:
+      url: Please enter the rtmp access address. #  Example：http://192.168.1.1:1985/rtc/v1/whip/?app=live&stream=

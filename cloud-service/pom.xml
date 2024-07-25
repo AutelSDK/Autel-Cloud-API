@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>autel-cloud-api</artifactId>
+        <groupId>com.autel</groupId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cloud-service</artifactId>
+    <version>${revision}</version>
+
+    <properties>
+        <mysql.version>8.0.31</mysql.version>
+        <mybatis-plus.version>3.4.2</mybatis-plus.version>
+        <druid.version>1.2.6</druid.version>
+        <jwt.version>3.12.1</jwt.version>
+        <minio.version>8.3.7</minio.version>
+        <okhttp3.version>4.9.1</okhttp3.version>
+        <aliyun-sdk-sts.version>3.1.0</aliyun-sdk-sts.version>
+        <aliyun-oss.version>3.12.0</aliyun-oss.version>
+        <glassfish-jaxb.version>2.3.3</glassfish-jaxb.version>
+        <log4j2.version>2.15.0</log4j2.version>
+        <javax-jaxb.version>2.3.0</javax-jaxb.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.autel</groupId>
+            <artifactId>cloud-api</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.autel.great.redis</groupId>
+            <artifactId>autel-framework-redis</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.autel.great.db</groupId>
+            <artifactId>autel-framework-db</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <artifactId>autel-framework-storage</artifactId>
+            <groupId>com.autel.great.oss</groupId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <artifactId>autel-framework-web</artifactId>
+            <groupId>com.autel.great.web</groupId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+</project>
