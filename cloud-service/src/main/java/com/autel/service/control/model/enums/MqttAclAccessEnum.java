@@ -2,11 +2,7 @@ package com.autel.service.control.model.enums;
 
 import lombok.Getter;
 
-/**
- * @author sean
- * @version 1.3
- * @date 2023/1/13
- */
+
 @Getter
 public enum MqttAclAccessEnum {
 

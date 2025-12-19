@@ -5,11 +5,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.util.Arrays;
 
-/**
- * @author sean
- * @version 1.4
- * @date 2023/3/13
- */
+
 public enum GimbalResetModeEnum {
 
     RECENTER, DOWN, RECENTER_PAN, PITCH_DOWN;

@@ -2,11 +2,6 @@ package com.autel.service.control.model.enums;
 
 import lombok.Getter;
 
-/**
- * @author sean
- * @version 1.3
- * @date 2023/2/21
- */
 @Getter
 public enum DroneControlMethodEnum {
 
