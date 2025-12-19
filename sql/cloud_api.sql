@@ -184,8 +184,8 @@ VALUES
     (13, 2, 20121, 0, '8.3寸遥控器', NULL),
     (14, 3, 30000, 0, 'Autel Virtual Nest', '道通虚拟机巣'),
     (15, 3, 30001, 0, 'EVO Nest', '道通多旋翼机巣'),
-    (16, 3, 30002, 0, 'Autel Dragonfish Nest', '道通机巣二代'),
-    (17, 3, 30004, 0, 'Autel Nest2', 'Remote control for M300'),
+    (16, 3, 30002, 0, 'Autel Dragonfish Nest', '道通龙鱼机巣'),
+    (17, 3, 30004, 0, 'Autel Nest2', '道通机巣二代'),
 
 /*!40000 ALTER TABLE `manage_device_dictionary` ENABLE KEYS */;
 UNLOCK TABLES;
